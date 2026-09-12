@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Free QR Code Generator — Create & Download QR Codes Instantly</title>
+<meta name="description" content="Generate a free QR code from any URL or text in seconds. Pick your own color, preview it live, and download it as a PNG. No sign-up, works great on desktop and mobile." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true"></span>
+      QR Snap
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="top-nav">
+      <span></span>
+    </button>
+    <nav class="top-nav" id="top-nav">
+      <a href="#tool">Generator</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="tool">
+    <div class="wrap">
+      <div class="hero-intro">
+        <h1>Turn any link or text into a QR code</h1>
+        <p>Type something below and watch your code build itself. Pick a color, then download it as a PNG — free, and nothing you enter ever leaves your browser.</p>
+      </div>
+
+      <div class="tool">
+        <div class="tool-panel">
+          <label class="field-label" for="qr-input">URL or text</label>
+          <textarea id="qr-input" placeholder="https://example.com or any text you'd like to encode" autofocus></textarea>
+
+          <div class="controls-row">
+            <div class="color-field">
+              <input type="color" id="qr-color" value="#17181C" aria-label="QR code color" />
+              <div class="swatches" aria-hidden="true">
+                <button class="swatch" style="background:#17181C" data-color="#17181C" title="Ink"></button>
+                <button class="swatch" style="background:#3733B0" data-color="#3733B0" title="Indigo"></button>
+                <button class="swatch" style="background:#0F9D8B" data-color="#0F9D8B" title="Teal"></button>
+                <button class="swatch" style="background:#B3261E" data-color="#B3261E" title="Red"></button>
+              </div>
+            </div>
+
+            <div class="size-field">
+              <select id="qr-size" aria-label="QR code size">
+                <option value="220">Small — 220px</option>
+                <option value="320" selected>Medium — 320px</option>
+                <option value="480">Large — 480px</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-preview">
+          <div id="qr-canvas-wrap"></div>
+          <button class="btn btn-primary" id="qr-download" disabled>Download PNG</button>
+          <div class="encoded-preview" id="qr-encoded-preview"></div>
+        </div>
+      </div>
+
+      <div class="ad-slot ad-banner">Ad space</div>
+    </div>
+  </section>
+
+  <section class="content-section" id="how-it-works">
+    <div class="wrap">
+      <h2>How QR codes work</h2>
+      <p>A QR code is a small grid of black and white squares that stores information in a pattern a camera can read — much more of it than a barcode, and from any angle.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Encode</h3>
+          <p>Your text or link is converted into a sequence of bits, then arranged into the grid pattern, with extra data added so the code can still be read even if part of it is damaged or covered.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Share</h3>
+          <p>Print the code, add it to a poster, or drop it into a document or email. Since the code just encodes text, it works anywhere an image can go.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Scan</h3>
+          <p>A phone camera or scanner app locates the three corner squares to orient the grid, reads the pattern, and reconstructs your original link or text instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="faq">
+    <div class="wrap">
+      <h2>Frequently asked questions</h2>
+
+      <details class="faq-item">
+        <summary class="faq-q">Is this actually free to use?<span class="plus"></span></summary>
+        <p class="faq-a">Yes. There's no sign-up, no watermark, and no limit on how many codes you generate.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Do QR codes expire?<span class="plus"></span></summary>
+        <p class="faq-a">No. A QR code made here simply stores your text or link directly in the pattern, so it works for as long as the link itself is valid — there's no third-party service that can shut it off.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Do you store what I type in?<span class="plus"></span></summary>
+        <p class="faq-a">No. The code is generated entirely in your browser, so your text never gets sent to a server or saved anywhere.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Will a colored code still scan properly?<span class="plus"></span></summary>
+        <p class="faq-a">Most colors scan fine as long as there's strong contrast against the white background. Very light or pastel colors can be harder for some cameras to pick up, so darker tones are the safer choice.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Can I use these codes commercially?<span class="plus"></span></summary>
+        <p class="faq-a">Yes, feel free to use your downloaded codes for personal or business purposes, including on products and printed materials.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">What size should I download for printing?<span class="plus"></span></summary>
+        <p class="faq-a">For anything printed and scanned from a short distance, the large option gives you enough resolution to stay crisp; for a business card or small label, medium is usually plenty.</p>
+      </details>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="ad-slot ad-square">Ad space</div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <a href="index.html" class="logo">
+        <span class="logo-mark" aria-hidden="true"></span>
+        QR Snap
+      </a>
+      <nav class="footer-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </nav>
+    </div>
+    <p class="footer-note">© 2026 QR Snap. Codes are generated locally in your browser.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

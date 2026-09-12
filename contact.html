@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — QR Snap</title>
+<meta name="description" content="Get in touch with the QR Snap team with questions, feedback, or bug reports." />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true"></span>
+      QR Snap
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="top-nav">
+      <span></span>
+    </button>
+    <nav class="top-nav" id="top-nav">
+      <a href="index.html#tool">Generator</a>
+      <a href="index.html#how-it-works">How it works</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page-content">
+  <h1>Contact us</h1>
+  <p>Questions, feedback, or found something broken? Send a message and we'll get back to you.</p>
+
+  <form class="contact-form" action="mailto:newmaster9280@gmail.com" method="post" enctype="text/plain">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+    <div>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send message</button>
+  </form>
+
+  <h2>Prefer email?</h2>
+  <p>Reach us directly at <a href="mailto:newmaster9280@gmail.com">newmaster9280@gmail.com</a>.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <a href="index.html" class="logo">
+        <span class="logo-mark" aria-hidden="true"></span>
+        QR Snap
+      </a>
+      <nav class="footer-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </nav>
+    </div>
+    <p class="footer-note">© 2026 QR Snap. Codes are generated locally in your browser.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
